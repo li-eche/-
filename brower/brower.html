@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            height: 50px;
+            width: 1500px;
+            font: 1em sans-serif ;
+            color: white;
+            background-color:transparent;
+            border-style: none;
+        }
+        input:focus{
+            border-style: none;
+            outline: none; 
+        }
+        body{
+           
+            background-image:url("preview.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            
+        
+        }
+        p{
+            font: 0.9em italic;
+            color: white;
+            line-height: 8px;
+
+        }
+    </style>
+    
+</head>
+<body>
+    <p>##The ownership belongs to Li yiku##</p>
+    <p>##点击S键自动获得焦点##</p>
+    <p>##点击Enter实现百度搜索##</p>
+    <a href="#"></a>
+    <input type="text">
+    <script>
+        var search=document.querySelector("input");
+        document.addEventListener("keyup",function(e){
+            if(e.keyCode==83){
+                search.focus();
+            }
+            if(e.keyCode==13){
+                location.href = 'https://www.baidu.com/s?&wd='  + search.value;
+            }
+        })
+    </script>
+</body>
+</html>
